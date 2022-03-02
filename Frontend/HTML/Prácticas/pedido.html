@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stella - Pedido</title>
+</head>
+<body>
+    <h1>Pedido</h1>
+
+    <form action="pedido.js">
+        <p>¿Qué tipo de pastel quieres?</p>
+        <p>(Puedes combinar hasta dos opciones)</p>
+        <select name="sabor1" id="sabor1">
+            <option value="Vía Láctea (3 leches)">Vía Láctea (3 leches)</option>
+            <option value="Andrómeda (chocolate)">Andrómeda (chocolate)</option>
+            <option value="Nube de Magallanes (red velvet)">Nube de Magallanes (red velvet)</option>
+            <option value="NGC 6753 (vainilla)">NGC 6753 (vainilla)</option>
+        </select><br><br>
+        <select name="sabor2" id="sabor2">
+            <option value="Sólo quiero un sabor">Sólo quiero un sabor</option>
+            <option value="Vía Láctea (3 leches)">Vía Láctea (3 leches)</option>
+            <option value="Andrómeda (chocolate)">Andrómeda (chocolate)</option>
+            <option value="Nube de Magallanes (red velvet)">Nube de Magallanes (red velvet)</option>
+            <option value="NGC 6753 (vainilla)">NGC 6753 (vainilla)</option>
+        </select><br><br>
+        <p>¿Qué adornos añadiremos?</p>
+        <p>(Selecciona las opciones que desees)</p>
+        <input type="checkbox" id="FR" name="FR" value="FR">
+        <label for="FR">Frutos Rojos</label><br>
+        <input type="checkbox" id="FT" name="FT" value="FT">
+        <label for="FT">Frutas de temporada</label><br>
+        <input type="checkbox" id="F1" name="F1" value="F1">
+        <label for="F1">Fondant (selecciona un color)</label> <input type="color"><br>
+        <input type="checkbox" id="F2" name="F2" value="F2">
+        <label for="F2">Figura de fondant</label><br><br>
+        
+        <p>Ingresa tus datos</p>
+        <label for="Nombre">Nombre</label><br>
+        <input type="text" name="Nombre" id="Nombre" placeholder="Nombre">
+        <br><br>
+        <label for="Teléfono">Teléfono</label><br>
+        <input type="number" name="Teléfono" id="Teléfono" placeholder="Número telefónico">
+        <br><br>
+        <label for="Correo ">Correo electrónico</label><br>
+        <input type="email" name="Correo" id="Correo" placeholder="correo@ejemplo.com">
+        <br><br>
+        <label for="Descripción">Descripción general del pastel</label><br>
+        <input type="text" size="200" name="Descripción" id="Descripción" placeholder="Ingresa una descripción">
+        <br><br>
+
+<br>
+        <input type="reset">
+        <input type="submit">
+    </form>
+    <hr>
+    <p>Pastelería Stella</p>
+    <p>Telefóno: 55-55555555</p>
+    <p>Horarios de atención: Lunes a viernes 09:00 a 18:00 hrs.</p>
+</body>
+</html>
