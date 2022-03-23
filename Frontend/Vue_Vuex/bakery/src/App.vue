@@ -1,30 +1,13 @@
 <template>
-  <nav class="p-30">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <nav class="w-full h-28 bg-topbar flex justify-between items-center">
+    <div class="px-4">
+      <img
+        src="./assets/logo_stella.png" alt="Logo_Stella" class="w-auto h-28"/>
+    </div>
+    <div class="font-bold text-xl text-red-400 px-6">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/baker">Pastelero</router-link>
+    </div>
   </nav>
-  <router-view/>
+  <router-view />
 </template>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
