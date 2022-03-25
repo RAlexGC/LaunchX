@@ -1,17 +1,12 @@
 <template>
   <div class="font-sans bg-red-300 flex flex-col py-2">
-    <p class="font-bold text-xl text-white pt-2 ml-2">Bienvenidos a Stella</p>
+    <p class="font-bold text-xl text-white pt-2 ml-2">Bienvenido(a)</p>
     <div class="flex justify-center items-center px-4 pt-4">
-      <img
-        :src="require('../assets/cake.jpg')"
-        alt=""
-        class="w-1/2 h-auto shadow-md rounded-md"
-      />
     </div>
-    <p class="font-semibold text-lg text-black ml-2 pb-4">Pasteles</p>
+    <p class="font-semibold text-lg text-black ml-2 pb-4">Inventario de pasteles</p>
     <div class="flex justify-between px-4 text-base font-semibold">
       <p>Vía Láctea (3 leches)</p>
-      <p>$150.00/kg</p>
+      <p>{{ $store.state.invs1 }}</p>
     </div>
     <div class="flex justify-between px-4 text-base font-semibold">
       <p>Andrómeda (chocolate)</p>
@@ -30,7 +25,7 @@
 
 <script>
 export default {
-  name: "Menu",
+  name: "InvCakes",
   props: {},
 };
 </script>

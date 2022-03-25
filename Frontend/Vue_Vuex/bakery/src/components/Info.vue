@@ -1,5 +1,5 @@
 <template>
-  <div class="py-4 text-gray-500 text-sm mt-12 mx-auto text-center bg-topbar">
+  <div class="py-4 text-gray-500 text-sm mx-auto text-center bg-topbar">
     <p>Pastelería Stella</p>
     <span class="text-red-500">♥</span>
     <p>Telefóno: 55-55555555</p>

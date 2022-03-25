@@ -1,13 +1,13 @@
 <template>
   <div class="bg-red-300 pb-2">
-    <div class="flex justify-center items-center px-4 pb-1 pt-2 rounded-full">
+    <div class="flex justify-center items-center px-4 pt-2 rounded-full">
       <img
         :src="require('../assets/cake2.jpg')"
         alt=""
         class="w-1/2 h-auto shadow-md rounded-md"
       />
     </div>
-    <p class="font-semibold text-lg text-black ml-2 py-4">Adornos</p>
+    <p class="font-semibold text-lg text-black ml-2 pb-4">Adornos</p>
     <div class="flex justify-between items-center px-4 text-base font-semibold">
       <div class="flex flex-col">
         <p>Frutos rojos</p>

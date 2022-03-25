@@ -1,5 +1,5 @@
 <template>
-  <nav class="w-full h-28 bg-topbar flex justify-between items-center">
+  <nav class="w-full bg-topbar flex justify-between items-center fixed z-50 shadow-md">
     <div class="px-4">
       <img
         src="./assets/logo_stella.png" alt="Logo_Stella" class="w-auto h-28"/>

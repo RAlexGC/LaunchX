@@ -1,9 +1,10 @@
 <template>
-  <div class="w-full h-screen">
+  <div class="w-full h-screen pt-28 relative">
     <Menu></Menu>
     <Toppings></Toppings>
     <Order></Order>
     <TopOrder></TopOrder>
+    <ClientData></ClientData>
     <Info></Info>
   </div>
 </template>
@@ -15,6 +16,7 @@ import Info from "@/components/Info.vue";
 import Toppings from "@/components/Toppings.vue";
 import Order from "@/components/Order.vue";
 import TopOrder from "@/components/TopOrder.vue";
+import ClientData from "@/components/ClientData.vue"
 
 export default {
   name: "HomeView",
@@ -24,6 +26,7 @@ export default {
     Toppings,
     Order,
     TopOrder,
+    ClientData,
   },
 };
 </script>
