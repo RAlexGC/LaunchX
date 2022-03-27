@@ -5,10 +5,10 @@
     <p class="text-xl py-2 items-center justify-center">Pedido</p>
     <p>{{ $store.state.sabor1 }}</p>
     <p>{{ $store.state.sabor2 }}</p>
-    <p>{{ $store.state.fr }}</p>
+    <p>{{ $store.state.order.nom }}</p>
     <p>¿Qué tipo de pastel quieres?</p>
     <p class="font-normal text-sm">(Puedes combinar hasta dos opciones)</p>
-    <select v-model="sabor1" id="sabor1" class="w-3/4 rounded-full">
+    <select v-model="sabor1" id="sabor1" class="w-3/4 rounded-full bg-white">
       <option value="Vía Láctea (3 leches)">Vía Láctea (3 leches)</option>
       <option value="Andrómeda (chocolate)">Andrómeda (chocolate)</option>
       <option value="Nube de Magallanes (red velvet)">
@@ -16,7 +16,7 @@
       </option>
       <option value="NGC 6753 (vainilla)">NGC 6753 (vainilla)</option>
     </select>
-    <select v-model="sabor2" id="sabor2" class="w-3/4 rounded-full">
+    <select v-model="sabor2" id="sabor2" class="w-3/4 rounded-full bg-white">
       <option disable value="">Sólo un sabor</option>
       <option value="Vía Láctea (3 leches)">Vía Láctea (3 leches)</option>
       <option value="Andrómeda (chocolate)">Andrómeda (chocolate)</option>

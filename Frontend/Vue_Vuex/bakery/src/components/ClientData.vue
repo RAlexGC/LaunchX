@@ -55,7 +55,7 @@
       <button
         type="submit"
         class="font-semibold text-lg bg-slate-700 text-white rounded-full py-1 px-4"
-        @click="$store.commit('submit, inventario')"
+        @click="$store.commit('submit')"
       >
         Enviar
       </button>
@@ -98,14 +98,6 @@ export default {
       },
       set(value) {
         this.$store.commit("updateDesc", value);
-      },
-    },
-    reset: {
-      get() {
-        return this.$store.state.desc;
-      },
-      set(value) {
-        this.$store.commit("resetDesc", value);
       },
     },
   },

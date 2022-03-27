@@ -16,7 +16,8 @@ import Info from "@/components/Info.vue";
 import Toppings from "@/components/Toppings.vue";
 import Order from "@/components/Order.vue";
 import TopOrder from "@/components/TopOrder.vue";
-import ClientData from "@/components/ClientData.vue"
+import ClientData from "@/components/ClientData.vue";
+import Vue from 'vue';
 
 export default {
   name: "HomeView",
