@@ -33,7 +33,7 @@ export default createStore({
     numorder: 0,
     order: {
       no: 0,
-      nom: "Alex",
+      nom: "",
       correo: "",
       telefono: "",
       psabor: "",
@@ -45,6 +45,8 @@ export default createStore({
       d: "",
     },
     orders: [],
+    ordersno: [],
+    selor: 0,
   },
   getters: {},
   mutations: {
@@ -119,6 +121,9 @@ export default createStore({
     updateF2(state, f2) {
       state.f2 = f2;
       state.t4 = true;
+    },
+    updateSO(state, selor) {
+      state.selor = selor;
     },
     reset(state) {
       state.sabor1 = null;
@@ -199,6 +204,7 @@ export default createStore({
         state.order.top4 = 'Figura de fondant';
       }
       state.orders.push(state.order);
+      state.ordersno.push(state.order.no);
       console.log(state.order)
       console.log(state.orders)
       state.sabor1 = null;
@@ -234,6 +240,7 @@ export default createStore({
         top4: "",
         d: "",
       };
+      alert('¡Pedido enviado exitosamente!')
     },
   },
   actions: {

@@ -1,8 +1,10 @@
 <template>
   <div class="font-sans bg-red-300 flex flex-col py-2">
     <div class="flex justify-center items-center px-4 pt-4">
+      <p class="font-semibold text-lg text-black ml-2 pb-4">
+        Inventario de toppings
+      </p>
     </div>
-    <p class="font-semibold text-lg text-black ml-2 pb-4">Inventario de toppings</p>
     <div class="flex justify-between px-4 text-base font-semibold">
       <p>Frutos rojos</p>
       <p>{{ $store.state.invt1 }}</p>

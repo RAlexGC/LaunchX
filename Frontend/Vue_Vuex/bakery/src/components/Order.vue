@@ -3,9 +3,6 @@
     class="font-semibold text-base text-black pl-2 py-2 flex flex-col justify-start w-full h-auto bg-red-300 space-y-1"
   >
     <p class="text-xl py-2 items-center justify-center">Pedido</p>
-    <p>{{ $store.state.sabor1 }}</p>
-    <p>{{ $store.state.sabor2 }}</p>
-    <p>{{ $store.state.order.nom }}</p>
     <p>¿Qué tipo de pastel quieres?</p>
     <p class="font-normal text-sm">(Puedes combinar hasta dos opciones)</p>
     <select v-model="sabor1" id="sabor1" class="w-3/4 rounded-full bg-white">
