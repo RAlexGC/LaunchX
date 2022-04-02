@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokedex LaunchX</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- <a href="https://www.flaticon.es/iconos-gratis/pokemon" title="pokemon iconos">Pokemon iconos creados por Those Icons - Flaticon</a> -->
+    <!-- <a href="https://www.flaticon.es/iconos-gratis/pokemon" title="pokemon iconos">Pokemon iconos creados por Smashicons - Flaticon</a> -->
+  </head>
+  <body>
+    <div class="w-full h-auto flex bg-red-600 items-center">
+      <img src="./img/pokemon-ir.png" alt="pokeball" class="w-14 h-14 p-1" />
+      <p class="text-white text-3xl font-bold font-sans ml-2">Pokédex</p>
+    </div>
+    <div class="w-auto h-auto lg:h-screen lg:bg-red-600">
+      <div
+        class="w-full h-auto flex justify-between py-2 lg:py-4 bg-red-600 lg:flex lg:flex-col lg:items-center"
+      >
+        <input
+          class="font-mono text-base lg:text-2xl bg-white text-slate-600 border-2 ml-1 p-1 w-7/12 h-auto rounded-lg text-center lg:w-2/6"
+          type="text"
+          placeholder="Buscar por nombre"
+          id="pokeName"
+          name="pokeName"
+        />
+        <button
+          class="bg-slate-600 font-mono text-xl lg:text-3xl text-white font-bold px-4 py-2 mr-1 lg:mt-2 rounded-md shadow-md"
+          onclick="fetchPokemon()"
+        >
+          Consultar
+        </button>
+      </div>
+      <div class="bg-black w-full h-1 lg:hidden"></div>
+      <div class="lg:w-full lg:h-auto lg:flex lg:px-4 lg:bg-red-600">
+        <div
+          class="lg:w-1/2 lg:h-auto lg:p-10 lg:flex lg:items-center lg:justify-center lg:bg-red-600"
+        >
+          <div
+            class="bg-slate-500 p-5 lg:w-3/4 lg:rounded-lg lg:p-8 lg:flex lg:items-center lg:justify-center lg:aspect-square"
+          >
+            <div
+              class="w-full h-auto flex flex-col items-center bg-blue-200 p-2 border-4 border-black rounded-md lg:justify-center lg:border-8 lg:p-1 lg:aspect-square"
+            >
+              <img
+                src="./img/pokeball.png"
+                alt="Pokemon"
+                id="pokeImg"
+                class="w-52 h-52 lg:w-1/2 lg:h-auto"
+              />
+              <div
+                class="text-xl lg:text-2xl lg:mt-14 flex font-mono font-semibold text-black py-1"
+              >
+                <p id="pokeNum" class="px-4">#</p>
+                <p id="pokeNameOut" class="px-4">Nombre:</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-black w-full h-1 lg:hidden"></div>
+        <div
+          class="w-full lg:w-1/2 h-auto px-6 pt-0 pb-4 bg-red-600 flex flex-col space-y-1 lg:items-start lg:justify-center"
+        >
+          <p
+            class="mt-2 font-mono font-extrabold text-2xl text-white lg:text-4xl"
+          >
+            Estadísticas
+          </p>
+          <div
+            class="text-xl w-auto h-full flex flex-col font-mono bg-gray-300 border-2 border-black rounded-md shadow-md lg:ml-4 lg:w-3/4 lg:h-auto lg:text-2xl lg:justify-center lg:border-6 xl:space-y-2 lg:space-y-0"
+          >
+            <div class="w-full h-auto flex justify-between">
+              <p class="px-4 font-bold">Tipo:</p>
+              <p id="Type" class="px-4 font-semibold"></p>
+            </div>
+            <div class="w-auto h-auto flex justify-between">
+              <p class="px-4 font-bold">HP:</p>
+              <p id="HP" class="px-4 font-semibold"></p>
+            </div>
+            <div class="w-auto h-auto flex justify-between">
+              <p class="px-4 font-bold">Ataque:</p>
+              <p id="ATK" class="px-4 font-semibold"></p>
+            </div>
+            <div class="w-auto h-auto flex justify-between">
+              <p class="px-4 font-bold">Defensa:</p>
+              <p id="DEF" class="px-4 font-semibold"></p>
+            </div>
+            <div class="w-auto h-auto flex justify-between">
+              <p class="px-4 font-bold">Ataque especial:</p>
+              <p id="SPA" class="px-4 font-semibold"></p>
+            </div>
+            <div class="w-auto h-auto flex justify-between">
+              <p class="px-4 font-bold">Defensa especial:</p>
+              <p id="SPD" class="px-4 font-semibold"></p>
+            </div>
+            <div class="w-auto h-auto flex justify-between">
+              <p class="px-4 font-bold">Velocidad:</p>
+              <p id="Speed" class="px-4 font-semibold"></p>
+            </div>
+          </div>
+          <p
+            class="mt-2 font-mono font-extrabold text-2xl text-white lg:text-4xl"
+          >
+            Movimientos básicos
+          </p>
+          <div class="lg:w-full lg:h-auto">
+            <div
+            class="text-xl w-auto h-full flex flex-col justify-center py-2 font-mono bg-emerald-100 border-2 border-black rounded-md shadow-md lg:ml-4 lg:w-3/4 lg:text-2xl lg:px-10 lg:space-y-10 lg:border-6"
+          >
+            <div class="w-full h-auto flex justify-between">
+              <p id="mov1" class="px-4 font-bold">N/D</p>
+              <p id="mov2" class="px-4 font-bold">N/D</p>
+            </div>
+            <div class="w-auto h-auto flex justify-between">
+              <p id="mov3" class="px-4 font-bold">N/D</p>
+              <p id="mov4" class="px-4 font-bold">N/D</p>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <footer class="bg-red-600 w-auto h-auto">
+    <script src="./pokedex.js"></script>
+  </footer>
+</html>
